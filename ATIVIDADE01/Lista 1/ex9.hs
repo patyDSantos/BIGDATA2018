@@ -1,4 +1,4 @@
-{-Exercício 08: Crie uma lista de anos bissextos desde o ano 1 até o atual.-}
+{-Exercício 09: Encontre os 10 primeiros anos bissextos.-}
 
 bissexto ano = (ano `rem` 400 == 0) || ((ano `rem` 4 == 0) && (ano `rem` 100 /= 0))
 
@@ -8,4 +8,4 @@ ver_ano = filter bissexto [1..2018]
 -- |'main' executa programa principal
 main :: IO ()
 main = do
-    putStrLn $ "Os anos bissextos são: " ++ show ver_ano
+    putStrLn $ "Os 10 primeiros anos bissextos são: " ++ show (take 10 ver_ano)
