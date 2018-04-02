@@ -1,0 +1,1 @@
+{-Exercício 2:   Faça uma função que calcule a soma da diagonal principal de uma matriz.-}

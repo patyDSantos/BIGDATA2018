@@ -1,0 +1,1 @@
+{-Exercício 3:   Faça uma função que calcule a soma da diagonal secundária de uma matriz.-}
