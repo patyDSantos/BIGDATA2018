@@ -1,0 +1,1 @@
+{-Exercício 6:  Crie a função collatz x que retorna x/2, se x for par e (3x+1) se for ímpar.-}
