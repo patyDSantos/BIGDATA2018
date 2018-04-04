@@ -1,11 +1,13 @@
-{-Exercício 7:  Faça uma função que calcule o coeficiente binomial de (m,n).-}
+{-Exercício 1:  Crie uma função divisivel20 x que retorna verdadeiro se x for divisível por todos os números de 1 a 20.-}
 
-binomio :: Integer -> Integer -> Integer
-binomio n 0 = 1
-binomio n m = if m == n then 1
-              else binomio (n-1)m + binomio (n-1)(m-1)
+divisivel20 :: Integer -> String
+divisivel20 x = divisivel20' x 20
+  where
+    divisivel20' x i
+      | i == 1 = "Esse numero e divisivel por todos de 1 a 20"
+      | x `mod` i == 0 = divisivel20' x (i - 1)
+      | otherwise = "Esse numero nao e divisivel por todos de 1 a 20"
 main :: IO ()
 main = do
-    putStrLn $ "O coeficiente binomial é : " ++ show (binomio 5 3)
-    putStrLn $ "O coeficiente binomial é : " ++ show (binomio 4 1)
-    putStrLn $ "O coeficiente binomial é : " ++ show (binomio 3 0)
+    putStrLn $  "Resposta: " ++ show (divisivel20 1)
+    putStrLn $  "Resposta: " ++ show (divisivel20 41)
